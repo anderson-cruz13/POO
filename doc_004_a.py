@@ -12,5 +12,9 @@ p2 = People("Maria", 45)
 p3 = People("Anderson", 25)
 data_base = [vars(p1), vars(p2), vars(p3)]
 
-with open(CAMINHO_ARQUIVO, "w+") as arquivo:
-    json.dump(data_base, arquivo, ensure_ascii=False, indent=2)
+def fazer_dumpr():
+    with open(CAMINHO_ARQUIVO, "w+") as arquivo:
+        json.dump(data_base, arquivo, ensure_ascii=False, indent=2)
+    
+if __name__ == "__main__":
+    fazer_dumpr()
